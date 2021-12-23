@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:unicornapp/nav.dart';
 void main() {
   runApp(MyApp());
 }
