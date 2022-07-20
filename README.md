@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![](screenshot_1)
+![Screenshot 1](https://raw.githubusercontent.com/codesdk/unicorn-app-mobile/main/screenshots/screenshot_1.png)
 
 ## Palette
 
