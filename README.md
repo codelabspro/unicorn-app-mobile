@@ -1,5 +1,8 @@
 # Unicorn app
 
+## Screenshots
+
+![](screenshot_1)
 
 ## Palette
 

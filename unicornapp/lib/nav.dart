@@ -50,7 +50,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Center(child: Center(child: Text('Home'))));
+    return Container(
+        child: const Center(child: Center(child: Text('Welcome to Unicorn'))));
   }
 }
 
@@ -60,9 +61,9 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
+      child: const Center(
         child: Center(
-          child: Text('Dashboard'),
+          child: Text('Welcome to Dashboard'),
         ),
       ),
     );
