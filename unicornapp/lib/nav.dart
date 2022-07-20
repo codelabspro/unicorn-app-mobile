@@ -9,42 +9,76 @@ class Nav extends StatefulWidget {
 
 class _NavState extends State<Nav> {
   int _selectedIndex = 0;
-  List<Widget> _widgetOptions = <Widget>[
-    Text('Home'),
-    Text('Dashboard'),
-    Text('More')
-  ];
+  final List<String> _widgetOptions = ['Home', 'Dashboard', 'More'];
   void _onItemTap(int index) {
     setState(() {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Unicorn App')
-      ),
+      appBar: AppBar(title: const Text('Unicorn App')),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: Text(_widgetOptions.elementAt(_selectedIndex)),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('Home'),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.dashboard),
-              title: Text('Dashboard')
+            icon: Icon(Icons.dashboard),
+            label: 'Dashboard',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.more_horiz),
-              title: Text('More')
-          )
+            icon: Icon(Icons.more_horiz),
+            label: 'More',
+          ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
+      ),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(child: Center(child: Center(child: Text('Home'))));
+  }
+}
+
+class Dashboard extends StatelessWidget {
+  const Dashboard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Center(
+          child: Text('Dashboard'),
+        ),
+      ),
+    );
+  }
+}
+
+class More extends StatelessWidget {
+  const More({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Center(
+          child: Text('More'),
+        ),
       ),
     );
   }
